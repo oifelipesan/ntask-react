@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
-import Task from '../Task'
-import { Container, NoTasks, TextNoTask } from './styles'
+import Task from "../Task";
+import { Container, NoTasks, TextNoTask } from "./styles";
 
 class Tasks extends Component {
   render() {
@@ -11,10 +11,10 @@ class Tasks extends Component {
         {this.props.tasks.length === 0 ? (
           <NoTasks>
             <TextNoTask>
-              <span>Nenhuma tarefa cadastrada.</span>
-              <span> Vamos adicionar uma?</span>
+              <span>No tasks registered.</span>
+              <span> Let's add one?</span>
             </TextNoTask>
-            <Link to="/add-task">Adicionar tarefa</Link>
+            <Link to="/add-task">Add Task</Link>
           </NoTasks>
         ) : (
           this.props.tasks.map(task => (
@@ -27,8 +27,8 @@ class Tasks extends Component {
           ))
         )}
       </Container>
-    )
+    );
   }
 }
 
-export default Tasks
+export default Tasks;
